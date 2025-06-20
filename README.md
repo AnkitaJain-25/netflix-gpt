@@ -2,8 +2,18 @@
 - Create Vite app + React
 - Configure Tailwind
 - Header
+- Routing
 - Login Form
 - Sign Up form
+- Form Validation
+- useRef Hook
+- Firebase Setup
+- deploying our app to production
+- Create SignUp user account
+- Implement Sign In ser api
+- Created Redux store with userSlice
+- Implemented Sign out
+- Update Profile
 
 # Features
 - Login/Sign Up
