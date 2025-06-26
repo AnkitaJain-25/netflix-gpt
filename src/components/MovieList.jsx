@@ -20,15 +20,19 @@ const MovieList = ({ title, movies }) => {
 
   return (
     <div>
-      <h2 className="text-[1.4vw] py-2 text-white px-7 mt-3 font-bold">{title}</h2>
+      <h2 className="text-[1.4vw] py-2 text-white px-7 mt-3 font-bold">
+        {title}
+      </h2>
       <div className="relative">
-        <button
-          className="absolute left-0 top-0 z-10 bg-black/50 flex items-center justify-center h-full"
-          onClick={() => scroll("left")}
-          aria-label="Scroll Left"
-        >
-          <span className="text-4xl text-white">&#8592;</span>
-        </button>
+        {movies?.length > 7 && (
+          <button
+            className="absolute left-0 top-0 z-10 bg-black/50 flex items-center justify-center h-full"
+            onClick={() => scroll("left")}
+            aria-label="Scroll Left"
+          >
+            <span className="text-4xl text-white">&#8592;</span>
+          </button>
+        )}
         <div className="overflow-hidden h-full px-7" ref={scrollRef}>
           <div className="flex gap-3 h-full">
             {movies?.map((movie) => (
@@ -38,13 +42,15 @@ const MovieList = ({ title, movies }) => {
             ))}
           </div>
         </div>
-        <button
-          className="absolute right-0 top-0 z-10 bg-black/50 flex items-center justify-center h-full"
-          onClick={() => scroll("right")}
-          aria-label="Scroll Right"
-        >
-          <span className="text-4xl text-white">&#8594;</span>
-        </button>
+        {movies?.length > 7 && (
+          <button
+            className="absolute right-0 top-0 z-10 bg-black/50 flex items-center justify-center h-full"
+            onClick={() => scroll("right")}
+            aria-label="Scroll Right"
+          >
+            <span className="text-4xl text-white">&#8594;</span>
+          </button>
+        )}
       </div>
     </div>
   );
