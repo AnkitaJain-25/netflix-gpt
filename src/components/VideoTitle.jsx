@@ -1,16 +1,17 @@
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="w-full aspect-video flex flex-col items-start justify-center h-full pt-20 p-6 bg-gradient-to-r from-black rounded-lg shadow-lg absolute text-white">
-      <h1 className="text-4xl font-bold">{title}</h1>
-      <p className="text-lg text-gray-300 mb-4 w-1/4">{overview}</p>
-      <div className="flex space-x-4">
-        <button className="bg-white text-black px-6 py-2 rounded-md hover:bg-gray-200 transition duration-300">
+    <div className="w-full aspect-video flex flex-col pt-[10%] px-4 md:px-6 absolute text-white bg-gradient-to-r from-black">
+      <h1 className="text-2xl md:text-4xl font-bold">{title}</h1>
+      <p className="hidden md:inline-block text-lg text-gray-300 mb-4 w-1/4">
+        {overview}
+      </p>
+      <div className="flex space-x-4 my-2 md:my-0">
+        <button className="bg-white text-black px-3 py-1 md:px-6 md:py-2 rounded-md hover:bg-gray-200 transition duration-300">
           ▶ Play
         </button>
-        <button className="bg-gray-800 px-6 py-2 rounded-md hover:bg-gray-700 transition duration-300">
+        <button className="hidden md:inline-block bg-gray-800 px-6 py-2 rounded-md hover:bg-gray-700 transition duration-300">
           More Info
         </button>
-
       </div>
     </div>
   );

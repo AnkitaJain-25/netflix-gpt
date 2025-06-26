@@ -37,6 +37,16 @@
 - GPT Search Page
 - GPT Search Bar
 - (BONUS) Multi-Language feature in our App
+- Get Gemini AI Api key
+- Gpt Search API call
+- Fetched gptMoviesSuggestions from TMDB
+- Created gptSlice and added data
+- Reused Movie List component to make movie suggestion container
+- Memoization
+- Added .env file
+- Adding .env file to gitignore
+- Made our site responsive
+- Added Movie Modal 
 
 # Features
 - Login/Sign Up
@@ -52,6 +62,7 @@
             - Movie Suggestions
                 - Movie Lists * N
                     - cards * N
+                        - modal
 - Netflix GPT
     - Search Bar
     - Movie Suggestions
