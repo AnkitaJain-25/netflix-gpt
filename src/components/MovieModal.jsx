@@ -26,6 +26,7 @@ const MovieModal = ({
           movieId={id}
           title={title}
           backdropPath={backdropPath}
+          isModal
         />
         <div className="text-white px-4 pb-2">
           <h1 className="text-lg font-bold">{title}</h1>

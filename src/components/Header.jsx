@@ -72,7 +72,7 @@ const Header = () => {
             </select>
           )}
           <button
-            className="p-2 ml-auto rounded-md cursor-pointer bg-purple-800 text-white"
+            className="p-2 rounded-md cursor-pointer bg-purple-800 text-white"
             onClick={handleGPTSearchClick}
           >
             {showGPTSearch ? "Home" : "GPT Search"}

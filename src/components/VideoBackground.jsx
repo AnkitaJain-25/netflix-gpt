@@ -3,7 +3,7 @@ import useMovieTrailer from "../hooks/useMovieTrailer";
 import { useEffect, useState } from "react";
 import { IMG_CDN_URL } from "../utils/constants";
 
-const VideoBackground = ({ movieId, title, backdropPath }) => {
+const VideoBackground = ({ movieId, title, backdropPath, isModal = false }) => {
   const [showIframe, setShowIframe] = useState(false);
 
   const trailerVideo = useSelector(
@@ -23,18 +23,18 @@ const VideoBackground = ({ movieId, title, backdropPath }) => {
   }, [trailerVideo]);
 
   return (
-    <div className="w-full">
+    <div className={`${isModal ? 'w-full' : 'w-screen'}`}>
       {!trailerVideo ||
         (!showIframe && (
           <img
             alt={title}
             src={IMG_CDN_URL + backdropPath}
-            className="w-full"
+            className={`${isModal ? 'w-full' : 'md:h-screen w-screen'}`}
           />
         ))}
       {trailerVideo && showIframe && (
         <iframe
-          className="w-full aspect-video"
+          className={`${isModal ? 'w-full' : 'md:h-screen w-screen'} aspect-video`}
           src={`https://www.youtube.com/embed/${trailerVideo?.key}?&autoplay=1&mute=1`}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

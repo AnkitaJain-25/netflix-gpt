@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { IMG_CDN_URL } from "../utils/constants";
 import MovieModal from "./MovieModal";
-import VideoBackground from "./VideoBackground";
 
 const MovieCard = ({ movieDetails }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
